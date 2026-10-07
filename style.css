@@ -1,0 +1,840 @@
+/* --------------------------------------------------
+   GLOBAL STYLES
+   These rules apply to the whole website.
+-------------------------------------------------- */
+
+/* Removes the browser's default spacing and makes
+   element sizing easier to control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Controls the default appearance of the webpage */
+body {
+    background-color: #0d1117;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------
+   NAVIGATION
+   Styles the navigation bar at the top of the website.
+-------------------------------------------------- */
+
+/* Main navigation container */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* TH logo */
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Groups the navigation links and adds space between them */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+
+/* Styles the individual navigation links */
+.nav-links a {
+    color: #b8c0cc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------
+   HERO SECTION
+   Main introduction shown at the top of the website.
+-------------------------------------------------- */
+
+.hero {
+    max-width: 1200px;
+    min-height: 75vh;
+    margin: 0 auto;
+    padding: 120px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Small category label above the main heading */
+.hero-label {
+    margin-bottom: 18px;
+
+    color: #66c98d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* Main name heading */
+.hero h1 {
+    font-size: 72px;
+    line-height: 1.05;
+    margin-bottom: 12px;
+}
+
+
+/* Main portfolio statement */
+.hero h2 {
+    max-width: 800px;
+
+    color: #8b949e;
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+}
+
+
+/* Highlights part of the main statement */
+.hero h2 span {
+    color: #ffffff;
+}
+
+
+/* Introductory paragraph */
+.hero-description {
+    max-width: 650px;
+    margin-top: 30px;
+
+    color: #b8c0cc;
+    font-size: 18px;
+}
+
+
+/* Projects button */
+.hero-button {
+    width: fit-content;
+    margin-top: 35px;
+    padding: 12px 22px;
+
+    color: #ffffff;
+    border: 1px solid #66c98d;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------
+   PROJECTS
+   Displays portfolio projects and their information.
+-------------------------------------------------- */
+
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+
+/* Heading shown above the project cards */
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #66c98d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-size: 42px;
+}
+
+
+/* Individual project container */
+.project-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+
+/* Container for the project preview image */
+.project-image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+/* Makes the image fit inside its container */
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Project number */
+.project-number {
+    margin-bottom: 12px;
+
+    color: #66c98d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Project title */
+.project-info h3 {
+    margin-bottom: 18px;
+
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+
+/* Short project summary */
+.project-description {
+    margin-bottom: 24px;
+
+    color: #b8c0cc;
+    font-size: 17px;
+}
+
+
+/* Container for the technology tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* Individual technology tag */
+.project-tags span {
+    padding: 6px 12px;
+
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+
+    color: #b8c0cc;
+    font-size: 13px;
+}
+
+/* Project title links */
+.project-info h3 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* --------------------------------------------------
+   CASE STUDY HERO
+   Styles the introduction of individual project pages.
+-------------------------------------------------- */
+
+.case-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 70px;
+}
+
+
+/* Main project title */
+.case-hero h1 {
+    max-width: 900px;
+    margin-bottom: 30px;
+
+    font-size: 64px;
+    line-height: 1.05;
+}
+
+
+/* Short introduction beneath the project title */
+.case-intro {
+    max-width: 750px;
+
+    color: #b8c0cc;
+    font-size: 20px;
+}
+
+
+/* Project metadata: data, tools, resolution and date */
+.case-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    margin-top: 60px;
+    padding-top: 30px;
+
+    border-top: 1px solid #30363d;
+}
+
+
+/* Small headings within the metadata */
+.case-meta span {
+    color: #66c98d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* Metadata values */
+.case-meta p {
+    margin-top: 6px;
+
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* --------------------------------------------------
+   CASE STUDY VISUAL
+   Displays the main finished project image.
+-------------------------------------------------- */
+
+.case-visual {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+}
+
+
+/* Keeps the project image within the page width */
+.case-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+}
+
+
+/* Small description beneath the image */
+.image-caption {
+    margin-top: 12px;
+
+    color: #8b949e;
+    font-size: 13px;
+}
+
+/* --------------------------------------------------
+   CASE STUDY CONTENT
+   Contains the written analysis and methodology.
+-------------------------------------------------- */
+
+.case-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px 120px;
+}
+
+
+/* Individual section within the case study */
+.content-section {
+    margin-bottom: 90px;
+}
+
+/* Small numbered label above each section */
+.content-label {
+    margin-bottom: 18px;
+
+    color: #66c98d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* Case study section headings */
+.content-section h2 {
+    margin-bottom: 28px;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+
+/* Main case study paragraphs */
+.content-section > p:not(.content-label) {
+    margin-bottom: 20px;
+
+    color: #b8c0cc;
+    font-size: 17px;
+}
+
+/* Dataset summary shown within the case study */
+.data-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    margin: 40px 0 30px;
+
+    background-color: #30363d;
+    border: 1px solid #30363d;
+}
+
+
+/* Individual dataset */
+.data-list div {
+    padding: 22px;
+
+    background-color: #0d1117;
+}
+
+
+/* Dataset name */
+.data-list span {
+    color: #66c98d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* Dataset description */
+.data-list p {
+    margin-top: 5px;
+
+    color: #b8c0cc;
+    font-size: 14px;
+}
+
+/* --------------------------------------------------
+   METHODOLOGY
+   Styles the NDVI equation and processing workflow.
+-------------------------------------------------- */
+
+/* Highlights the equation used to calculate NDVI */
+.equation {
+    margin: 35px 0;
+    padding: 25px 30px;
+
+    background-color: #161b22;
+    border-left: 3px solid #66c98d;
+}
+
+
+/* Equation label */
+.equation span {
+    color: #66c98d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* Equation itself */
+.equation p {
+    margin-top: 8px;
+
+    color: #ffffff;
+    font-size: 24px;
+}
+
+
+/* Processing workflow */
+.workflow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+
+/* Individual processing step */
+.workflow div {
+    padding: 20px;
+
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+}
+
+
+/* Workflow step number */
+.workflow span {
+    color: #66c98d;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* Workflow step description */
+.workflow p {
+    margin-top: 8px;
+
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* --------------------------------------------------
+   CASE STUDY NOTES
+   Highlights important interpretation or limitations.
+-------------------------------------------------- */
+
+.case-note {
+    margin-top: 35px;
+    padding: 25px 30px;
+
+    background-color: #161b22;
+    border-left: 3px solid #66c98d;
+}
+
+
+/* Small heading within the note */
+.case-note span {
+    color: #66c98d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* Note text */
+.case-note p {
+    margin-top: 8px;
+
+    color: #b8c0cc;
+    font-size: 15px;
+}
+
+/* --------------------------------------------------
+   SKILLS
+   Displays technical skills demonstrated by a project.
+-------------------------------------------------- */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+
+/* Individual skill */
+.skills-list span {
+    padding: 8px 14px;
+
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+
+    color: #b8c0cc;
+    font-size: 13px;
+}
+
+/* --------------------------------------------------
+   ABOUT
+-------------------------------------------------- */
+
+.about {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+
+/* Keeps the About text readable rather than
+   stretching across the entire screen */
+.about-content {
+    max-width: 750px;
+}
+
+
+.about-content p {
+    margin-bottom: 20px;
+
+    color: #b8c0cc;
+    font-size: 18px;
+}
+
+/* --------------------------------------------------
+   CONTACT
+-------------------------------------------------- */
+
+.contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 130px;
+}
+
+
+.contact h2 {
+    margin-bottom: 20px;
+
+    font-size: 48px;
+}
+
+
+.contact-text {
+    max-width: 600px;
+    margin-bottom: 35px;
+
+    color: #b8c0cc;
+    font-size: 18px;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+
+    border-top: 1px solid #30363d;
+
+    color: #8b949e;
+    font-size: 13px;
+}
+
+/* Clear link from a project preview to the full case study */
+.project-link {
+    display: inline-block;
+    margin-top: 28px;
+
+    color: #66c98d;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Gives visual feedback when the mouse is over the link */
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   INTERACTIONS
+   Small visual feedback when the user hovers links.
+-------------------------------------------------- */
+
+/* Smooth movement when navigation links jump to a section */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation links */
+.nav-links a {
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #66c98d;
+}
+
+
+/* Project title */
+.project-info h3 a {
+    transition: color 0.2s ease;
+}
+
+.project-info h3 a:hover {
+    color: #66c98d;
+}
+
+
+/* Project image */
+.project-image img {
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.02);
+}
+
+
+/* Main buttons */
+.hero-button {
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: #66c98d;
+    color: #0d1117;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   These styles apply when the screen is 768px wide
+   or smaller.
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVIGATION ---------- */
+
+    nav {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+
+    /* ---------- HOMEPAGE HERO ---------- */
+
+    .hero {
+        min-height: auto;
+        padding: 90px 20px 70px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects {
+        padding: 70px 20px;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+        padding: 70px 20px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        padding: 70px 20px 100px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+    }
+
+
+    /* ---------- CASE STUDY HERO ---------- */
+
+    .case-hero {
+        padding: 70px 20px 50px;
+    }
+
+    .case-hero h1 {
+        font-size: 44px;
+    }
+
+    .case-intro {
+        font-size: 17px;
+    }
+
+
+    /* Stack the four project details vertically */
+    .case-meta {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+
+    /* ---------- CASE STUDY IMAGE ---------- */
+
+    .case-visual {
+        padding: 0 20px 70px;
+    }
+
+
+    /* ---------- CASE STUDY CONTENT ---------- */
+
+    .case-content {
+        padding: 20px 20px 80px;
+    }
+
+    .content-section h2 {
+        font-size: 30px;
+    }
+
+
+    /* Data information becomes one column */
+    .data-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Workflow becomes one column */
+    .workflow {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Results remain compact but readable */
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 30px 20px;
+    }
+
+}
+
+/* --------------------------------------------------
+   CASE STUDY NAVIGATION
+-------------------------------------------------- */
+
+.case-navigation {
+    padding-top: 40px;
+    border-top: 1px solid #30363d;
+}
+
+.case-navigation a {
+    color: #66c98d;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.case-navigation a:hover {
+    color: #ffffff;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Sentinel-2 NDVI analysis of vegetation greenness across the Lake District National Park using QGIS, GDAL and Earth observation data."
+    >
+
+    <title>Lake District NDVI Analysis | Tim Halliwell</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header>
+        <nav>
+
+            <!-- Returns to the portfolio homepage -->
+            <a href="index.html" class="logo">TH</a>
+
+            <div class="nav-links">
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Project introduction -->
+        <section class="case-hero">
+
+            <p class="hero-label">
+                EARTH OBSERVATION • REMOTE SENSING • GIS
+            </p>
+
+            <h1>Lake District<br>Vegetation Greenness</h1>
+
+            <p class="case-intro">
+                A satellite-based analysis of vegetation greenness across
+                the Lake District National Park using Sentinel-2 imagery
+                and the Normalised Difference Vegetation Index (NDVI).
+            </p>
+
+            <!-- Quick overview of the project -->
+            <div class="case-meta">
+
+                <div>
+                    <span>DATA</span>
+                    <p>Sentinel-2 L2A</p>
+                </div>
+
+                <div>
+                    <span>TOOLS</span>
+                    <p>QGIS / GDAL</p>
+                </div>
+
+                <div>
+                    <span>RESOLUTION</span>
+                    <p>10 metres</p>
+                </div>
+
+                <div>
+                    <span>DATE</span>
+                    <p>July 2026</p>
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- Main project visual: final NDVI analysis map -->
+        <section class="case-visual">
+
+            <img
+                src="images/lake-district-ndvi-web.png"
+                alt="Final NDVI vegetation greenness analysis map of the Lake District National Park"
+            >
+
+            <!-- Caption explaining what the visual represents -->
+            <p class="image-caption">
+                Final vegetation greenness analysis produced from Sentinel-2
+                imagery acquired in July 2026.
+            </p>
+
+        </section>
+
+        <!-- Case study content: explains the purpose, process and results -->
+<section class="case-content">
+
+    <!-- Project overview -->
+    <div class="content-section">
+
+        <p class="content-label">01 — OVERVIEW</p>
+
+        <h2>Analysing vegetation across the Lake District.</h2>
+
+        <p>
+            This project uses Sentinel-2 satellite imagery to analyse
+            vegetation greenness across the Lake District National Park.
+            The aim was to create a continuous vegetation map while
+            developing a practical workflow for processing and interpreting
+            Earth observation data.
+        </p>
+
+        <p>
+            I calculated the Normalised Difference Vegetation Index (NDVI)
+            from red and near-infrared satellite bands, removed pixels
+            affected by cloud and cloud shadow, and combined imagery from
+            two acquisition dates to improve coverage across the study area.
+        </p>
+
+    </div>
+
+ <!-- ==================================================
+     02 — DATA
+     Satellite imagery and geographic datasets used.
+=================================================== -->
+
+<div class="content-section">
+
+    <p class="content-label">02 — DATA</p>
+
+    <h2>Sentinel-2 multispectral imagery.</h2>
+
+    <p>
+        The analysis uses Sentinel-2 Level-2A imagery from the Copernicus
+        Earth observation programme. Level-2A products provide
+        atmospherically corrected surface reflectance, making them suitable
+        for analysing vegetation using spectral indices such as NDVI.
+    </p>
+
+    <p>
+        The primary imagery was acquired on 20 July 2026, with imagery
+        from 12 July 2026 used to fill areas obscured by cloud and cloud
+        shadow. Multiple Sentinel-2 tiles were combined to provide coverage
+        across the Lake District National Park.
+    </p>
+
+    <!-- Key datasets -->
+    <div class="data-list">
+
+        <div>
+            <span>B08</span>
+            <p>Near Infrared • 10 m</p>
+        </div>
+
+        <div>
+            <span>B04</span>
+            <p>Red • 10 m</p>
+        </div>
+
+        <div>
+            <span>SCL</span>
+            <p>Scene Classification • 20 m</p>
+        </div>
+
+        <div>
+            <span>BOUNDARY</span>
+            <p>Natural England • Lake District National Park</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     03 — METHODOLOGY
+     How the satellite imagery was processed.
+=================================================== -->
+
+<div class="content-section">
+
+    <p class="content-label">03 — METHODOLOGY</p>
+
+    <h2>From satellite imagery to vegetation analysis.</h2>
+
+    <p>
+        NDVI was calculated from Sentinel-2's near-infrared (B08) and
+        red (B04) bands. Healthy, photosynthetically active vegetation
+        typically absorbs red light while reflecting strongly in the
+        near-infrared, allowing vegetation greenness to be estimated
+        from the difference between the two bands.
+    </p>
+
+    <!-- NDVI equation -->
+    <div class="equation">
+        <span>NDVI</span>
+        <p>(B08 − B04) / (B08 + B04)</p>
+    </div>
+
+    <p>
+        Cloud-contaminated pixels were identified using the Sentinel-2
+        Scene Classification Layer (SCL). Cloud shadow, medium-probability
+        cloud, high-probability cloud and thin cirrus classes were excluded
+        before the imagery was combined.
+    </p>
+
+    <p>
+        Imagery from 20 July formed the primary dataset. Where valid data
+        was unavailable, cloud-free pixels from 12 July were used as a
+        temporal gap fill. The completed raster was then clipped to the
+        Lake District National Park boundary and classified into five
+        NDVI greenness ranges.
+    </p>
+
+    <!-- Processing workflow -->
+    <div class="workflow">
+
+        <div>
+            <span>01</span>
+            <p>Sentinel-2 L2A</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <p>Calculate NDVI</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <p>Cloud Mask</p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <p>Mosaic Tiles</p>
+        </div>
+
+        <div>
+            <span>05</span>
+            <p>Temporal Gap Fill</p>
+        </div>
+
+        <div>
+            <span>06</span>
+            <p>Clip & Classify</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     04 — RESULTS
+     Main findings from the NDVI analysis.
+=================================================== -->
+
+<div class="content-section">
+
+    <p class="content-label">04 — RESULTS</p>
+
+    <h2>Vegetation greenness across the National Park.</h2>
+
+    <p>
+        The final dataset achieved approximately 99.97% valid coverage
+        across the Lake District National Park, with only a very small
+        area remaining without valid observations after temporal gap filling.
+    </p>
+
+    <!-- Key results -->
+    <div class="results-grid">
+
+        <div>
+            <span>88.7%</span>
+            <p>NDVI ≥ 0.4</p>
+        </div>
+
+        <div>
+            <span>26.2%</span>
+            <p>NDVI ≥ 0.6</p>
+        </div>
+
+        <div>
+            <span>99.97%</span>
+            <p>Valid coverage</p>
+        </div>
+
+        <div>
+            <span>2,361 km²</span>
+            <p>Analysed area</p>
+        </div>
+
+    </div>
+
+    <p>
+        Approximately 62.5% of the classified area recorded NDVI values
+        between 0.4 and 0.6, while a further 26.2% recorded values of
+        0.6 or greater. Together, these classes account for approximately
+        88.7% of the analysed area.
+    </p>
+
+</div>
+
+
+<!-- ==================================================
+     05 — INTERPRETATION & LIMITATIONS
+     What the results mean and where caution is needed.
+=================================================== -->
+
+<div class="content-section">
+
+    <p class="content-label">05 — INTERPRETATION & LIMITATIONS</p>
+
+    <h2>Understanding what NDVI can — and cannot — tell us.</h2>
+
+    <p>
+        The results show a strong vegetation signal across much of the
+        Lake District during July 2026, with 88.7% of the analysed area
+        recording NDVI values of 0.4 or greater.
+    </p>
+
+    <p>
+        However, NDVI should be interpreted as an indicator of vegetation
+        greenness and vigour rather than a direct measurement of vegetation
+        health. NDVI values can be influenced by vegetation type, soil,
+        moisture, atmospheric conditions and the timing of image acquisition.
+    </p>
+
+    <p>
+        Cloud and cloud-shadow contamination also presented a challenge.
+        These observations were removed using the Sentinel-2 Scene
+        Classification Layer, with imagery from 12 July used to fill gaps
+        in the primary 20 July dataset. This produced approximately 99.97%
+        valid coverage, although the final raster therefore contains
+        observations from two different dates.
+    </p>
+
+    <!-- Important interpretation note -->
+    <div class="case-note">
+
+        <span>INTERPRETATION</span>
+
+        <p>
+            The NDVI classes used in this project are interpretive ranges
+            for visualising relative vegetation greenness. They should not
+            be treated as universal thresholds for vegetation health.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     06 — SKILLS DEMONSTRATED
+     Technical skills used throughout the project.
+=================================================== -->
+
+<div class="content-section">
+
+    <p class="content-label">06 — SKILLS DEMONSTRATED</p>
+
+    <h2>Technical skills developed through the project.</h2>
+
+    <p>
+        This project provided practical experience working with real
+        Earth observation data and building a complete raster analysis
+        workflow from raw satellite imagery through to a finished
+        cartographic product.
+    </p>
+
+    <div class="skills-list">
+
+        <span>QGIS</span>
+        <span>GDAL</span>
+        <span>Remote Sensing</span>
+        <span>Sentinel-2</span>
+        <span>Raster Analysis</span>
+        <span>NDVI</span>
+        <span>Cloud Masking</span>
+        <span>Spatial Data</span>
+        <span>CRS & Reprojection</span>
+        <span>Data Visualisation</span>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     CASE STUDY NAVIGATION
+=================================================== -->
+
+<div class="case-navigation">
+    <a href="index.html#projects">← Back to Projects</a>
+</div>
+
+
+<!-- Close case-content -->
+</div>
+
+</section>
+
+</main>
+
+</body>
+
+</html>
